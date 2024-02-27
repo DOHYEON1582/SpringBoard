@@ -38,4 +38,11 @@ public class BoardServiceImpl implements BoardService {
 		return bdao.boardListSelect();
 	}
 
+
+	@Override
+	public BoardVO getBoard(int bno) throws Exception {
+		logger.debug(" getBoard() 실행");
+		return bdao.boardSelect(bno);
+	}
+
 }

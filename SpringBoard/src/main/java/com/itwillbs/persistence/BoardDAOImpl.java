@@ -37,6 +37,13 @@ public class BoardDAOImpl implements BoardDAO {
 		
 		return sql.selectList(NAMESPACE+".selectBoardList");
 	}
+
+	@Override
+	public BoardVO boardSelect(int bno) throws Exception {
+		logger.debug(" boardSelect(int bno) 호출");
+		
+		return sql.selectOne(NAMESPACE+".getBoard",bno);
+	}
 	
 	
 	

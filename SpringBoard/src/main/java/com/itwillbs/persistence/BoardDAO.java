@@ -18,6 +18,8 @@ public interface BoardDAO {
 	// 글 목록 조회
 	public List<BoardVO> boardListSelect() throws Exception;
 	
+	// 글 내용 조회
+	public BoardVO boardSelect(int bno) throws Exception;
 	
 
 }// dao
