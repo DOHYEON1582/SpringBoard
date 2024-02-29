@@ -48,8 +48,9 @@
 		
 		// 삭제하기 버턴 클릭시	
 		$(".btn-warning").click(function(){
-			confirm("삭제하기 버튼 클릭!");
-			formObj.attr("action","/board/delete");
+			alert("삭제하기 버튼 클릭!");
+			formObj.attr("action","/board/remove");
+			formObj.attr("method","post");
 			formObj.submit();
 			
 		});

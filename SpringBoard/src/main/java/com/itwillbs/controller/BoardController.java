@@ -131,9 +131,9 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.GET )
-	public String deleteGET(@RequestParam("bno") int bno) throws Exception{
-		logger.debug("deleteGET() 호출");
+	@RequestMapping(value = "/remove", method = RequestMethod.POST)
+	public String removePOST(@RequestParam("bno") int bno) throws Exception{
+		logger.debug("removePOST() 호출");
 		
 		bService.deleteBoard(bno);
 		
