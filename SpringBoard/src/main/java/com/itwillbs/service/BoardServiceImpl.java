@@ -45,4 +45,26 @@ public class BoardServiceImpl implements BoardService {
 		return bdao.boardSelect(bno);
 	}
 
+
+	@Override
+	public void updateViewCnt(int bno) throws Exception {
+		logger.debug("updateViewCnt() 실행");
+		bdao.boardViewCnt(bno);
+	}
+
+
+	@Override
+	public void updateBoard(BoardVO vo) throws Exception {
+		logger.debug("updateBoard() 실행");
+		bdao.boardUpdate(vo);
+	}
+
+
+	@Override
+	public void deleteBoard(int bno) throws Exception {
+		logger.debug("deleteBoard() 실행");
+		bdao.boardDelete(bno);
+		
+	}
+
 }

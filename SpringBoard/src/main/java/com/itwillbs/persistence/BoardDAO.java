@@ -21,5 +21,16 @@ public interface BoardDAO {
 	// 글 내용 조회
 	public BoardVO boardSelect(int bno) throws Exception;
 	
+	// 글 조회수 1 증가 
+	public void boardViewCnt(int bno) throws Exception;
+	
+	// 글 수정
+	public void boardUpdate(BoardVO vo) throws Exception;
+	
+	// 글 삭제
+	public void boardDelete(int bno) throws Exception;
+	
+	
+	
 
 }// dao

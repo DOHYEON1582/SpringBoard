@@ -2,12 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp"%>
 	
+	viewUpdateStatus : ${viewUpdateStatus }
 	<div class="content">
+	<form role="form" action="" method="get" class="fm">
+		<input type="hidden" name="bno" value="${vo.bno }">
+	</form>
 	
 		<h1>read.jsp</h1>
 		
 		<div class="box-header with-border">
-			<h3 class="box-title">게시판 글쓰기</h3>
+			<h3 class="box-title">게시판 글</h3>
 		</div>
 		
 		<div class="form-group">
@@ -37,14 +41,36 @@
 <script>
 	$(document).ready(function(){
 		
+		// bno를 저장하는 폼태그 정보
+		//console.log($("form[role='form']"));
+		//console.log($(".fm"));
+		var formObj = $("form[role='form']")
+		
+		// 삭제하기 버턴 클릭시	
+		$(".btn-warning").click(function(){
+			confirm("삭제하기 버튼 클릭!");
+			formObj.attr("action","/board/delete");
+			formObj.submit();
+			
+		});
+		
+		
+		// 수정하기 버턴 클릭시	
+		$(".btn-danger").click(function(){
+			alert("수정하기 버튼 클릭!");
+			formObj.attr("action","/board/modify");
+			formObj.submit();
+			
+		}); 
+		
 		//alert("test");
 		// 목록으로 버튼 클릭시
 		$(".btn-success").click(function(){
 			alert("목록이동 버튼 클릭!");
 			// 목록으로 이동
 			location.href="/board/list";
+			
 		});
-		
 	});
 
 </script>	  
