@@ -2,13 +2,18 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp"%>
 	
+	cri : ${cri} <br>
 	viewUpdateStatus : ${viewUpdateStatus }
 	<div class="content">
+	
+	<h1>read.jsp</h1>
+	
 	<form role="form" action="" method="get" class="fm">
 		<input type="hidden" name="bno" value="${vo.bno }">
+		<input type="hidden" name="page" value="${cri.page }">
+		<input type="hidden" name="pageSize" value="${cri.pageSize }">
 	</form>
 	
-		<h1>read.jsp</h1>
 		
 		<div class="box-header with-border">
 			<h3 class="box-title">게시판 글</h3>
@@ -69,7 +74,7 @@
 		$(".btn-success").click(function(){
 			alert("목록이동 버튼 클릭!");
 			// 목록으로 이동
-			location.href="/board/list";
+			location.href="/board/listCri?page=${cri.page}&pageSize=${cri.pageSize}";
 			
 		});
 	});

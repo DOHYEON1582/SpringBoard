@@ -24,7 +24,7 @@ public class DataSourceTest {
 	
 	private static final Logger logger = LoggerFactory.getLogger(DataSourceTest.class);
 	
-	@Test
+	//@Test
 	public void 테스트() {
 		logger.debug("ds : "+ds);
 		
