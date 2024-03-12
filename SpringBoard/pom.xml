@@ -118,6 +118,17 @@
 		</dependency>   
 		
 		<!-- 외부 라이브러리 추가 영역 -->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+    		<groupId>org.apache.poi</groupId>
+    		<artifactId>poi</artifactId>
+   		 	<version>4.1.2</version>
+		</dependency>
+		
+		
+    
+		
 		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
    			 <groupId>com.mysql</groupId>
